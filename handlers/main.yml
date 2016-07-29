@@ -1,0 +1,8 @@
+---
+# Handlers
+
+- name: Restart gmetad
+  service:
+    name: gmetad
+    state: restarted
+    enabled: yes

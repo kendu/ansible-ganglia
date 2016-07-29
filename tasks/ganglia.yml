@@ -1,0 +1,17 @@
+---
+# Ganglia tasks
+
+- name: Install gmetad
+  apt:
+    name: gmetad
+    state: latest
+    update_cache: yes
+  notify:
+    - Restart gmetad
+
+- name: Configure gmetad
+  template:
+    src: gmetad_conf
+    dest: /etc/ganglia/gmetad.conf
+  notify:
+    - Restart gmetad

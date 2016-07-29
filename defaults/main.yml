@@ -1,0 +1,6 @@
+---
+# Default variables
+
+graphite_collector_port: "2424"
+graphite_host: "localhost"
+graphite_data_source_name: "exymple"
